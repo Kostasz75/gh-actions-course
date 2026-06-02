@@ -7,13 +7,11 @@ on:
         type: boolean
         default: false
         description: Set to true to enable debug mode
-
-
 jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: [debug] Print start-up data
+      - name: '[debug] Print start-up data'
         if: ${{ inputs.debug }}
         run: |
           echo "Triggered by: ${{ github.event_name }}"
